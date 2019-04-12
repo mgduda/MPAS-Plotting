@@ -8,9 +8,10 @@ modules that appear.
 The goal of this repository is to function as a set of examples and reference
 for Python Modules that can be used to create model output plots.
 
-[Introduction](#Introduction)
-[Module Reference](#Module-References)
-[References and Credits](#Refs-and-Credits)
+**Contents**
+* [Introduction](#Introduction)
+* [Module Reference](#Module-References)
+* [References and Credits](#Refs-and-Credits)
 
 
 # Introduction <a name="Introduction"/>
