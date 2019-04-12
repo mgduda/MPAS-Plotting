@@ -8,10 +8,12 @@ modules that appear.
 The goal of this repository is to function as a set of examples and reference
 for Python Modules that can be used to create model output plots.
 
+**Python NetCDF Modules and other Met Datatypes**<a name="NetCDF"/>
+
 **Contents**
 * [Introduction](#Introduction)
     * [Numpy](#Numpy)
-    * [MatPlotLib](#MatPlotLib)
+    * [Python NetCDF Modules and other Met Datatypes](#NetCDF)
     * [Cartopy and Basemap](#Basemap)
     * [Python on Cheyenne and Casper](#venv)
     * [Python 2 and Python 3](#version)
@@ -42,7 +44,7 @@ approach to Fortran n-d arrays. With useful intrinsics such as `shape`,
 It also enables a load of optimized mathematical functions that are sure to fit
 your needs: <https://docs.scipy.org/doc/numpy/reference/routines.math.html>.
 
-**Python NetCDF Modules and other Met Datatypes**
+**Python NetCDF Modules and other Met Datatypes**<a name="NetCDF"/>
 
 There are a few modules out there that can support reading, creating and
 manipulating NetCDF. These include: Scipy NetCDF, NetCDF4 Dataset, xArray, as
