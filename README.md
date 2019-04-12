@@ -42,6 +42,27 @@ approach to Fortran n-d arrays. With useful intrinsics such as `shape`,
 It also enables a load of optimized mathematical functions that are sure to fit
 your needs: <https://docs.scipy.org/doc/numpy/reference/routines.math.html>.
 
+**Python NetCDF Modules and other Met Datatypes**
+
+There are a few modules out there that can support reading, creating and
+manipulating NetCDF. These include: Scipy NetCDF, NetCDF4 Dataset, xArray, as
+well as NCAR's PyNIO (which is an NCL wrapper).
+
+You have a multitude of modules to choose from, but I recommend starting with
+Scipy's NetCDF module to start. It contains the most examples and is the best
+documented.
+
+If you need to open other Datatypes such as Grib, HDF, etc. PyNIO is currently
+your best choice: <https://www.pyngl.ucar.edu/Nio.shtml>. However, with the
+shift to Python and PyNIO going into maintenance mode, it may be worth becoming
+familiar with Python alternatives. Here is a list of common met datatypes and
+modules that can open them:
+
+* GRIB - [cfgrib](https://github.com/ecmwf/cfgrib)
+* HDFS - [PyTables](http://www.pytables.org/index.html)
+* HDF-EOS - [PyHDF](https://www.hdfeos.org/software/pyhdf.php)
+
+(Note: I don't know how many of these are on cheyenne or capser)
 
 **MatPlotLib (MPL)**<a name="MatPlotLib"/>
 
