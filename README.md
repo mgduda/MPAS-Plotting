@@ -111,6 +111,8 @@ Other helpful References and Guides
 
 
 # References & Credits<a name="Refs-and-Credits"/>
+* [For examples and images describing MPL][1]
+* [For help creating mpas_patches][2]
 
 [1]: https://github.com/matplotlib/AnatomyOfMatplotlib
 [2]: https://github.com/lmadaus/mpas_python
