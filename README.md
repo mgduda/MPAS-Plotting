@@ -25,7 +25,7 @@ for Python Modules that can be used to create model output plots.
     * [Basemap](https://matplotlib.org/basemap/)
     * [Cartopy](https://scitools.org.uk/cartopy/docs/latest/)
 * Python NetCDF Tools
-    * [Scipy Netcdf](://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.io.netcdf.netcdf_file.html )
+    * [Scipy Netcdf](https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.io.netcdf.netcdf_file.html)
     * [Unidata's NetCDF4 Dataset](https://unidata.github.io/netcdf4-python/netCDF4/index.html)
     * [xArray](http://xarray.pydata.org/en/stable/generated/xarray.Dataset.to_netcdf.html)
 * Numpy
