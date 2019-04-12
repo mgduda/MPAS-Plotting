@@ -50,7 +50,8 @@ well as NCAR's PyNIO (which is an NCL wrapper).
 
 You have a multitude of modules to choose from, but I recommend starting with
 Scipy's NetCDF module to start. It contains the most examples and is the best
-documented.
+documented; however, it cannot open NetCDF4, but you can use UNIDATA's NetCDF4
+Dataset instead, its also easy to use, but its documentation could be better.
 
 If you need to open other Datatypes such as Grib, HDF, etc. PyNIO is currently
 your best choice: <https://www.pyngl.ucar.edu/Nio.shtml>. However, with the
@@ -114,6 +115,7 @@ Python 3.
 * Meteorological and Geographic Plotting
     * [Basemap](https://matplotlib.org/basemap/)
     * [Cartopy](https://scitools.org.uk/cartopy/docs/latest/)
+    * [Gold-Standard Basemap Tutorial](https://basemaptutorial.readthedocs.io/en/latest/)
 * Python NetCDF Tools
     * [Scipy Netcdf](https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.io.netcdf.netcdf_file.html)
     * [Unidata's NetCDF4 Dataset](https://unidata.github.io/netcdf4-python/netCDF4/index.html)
