@@ -17,4 +17,4 @@ plots.
 Please feel free to use, edit and modify `mpas_patches.py` as you see fit.
 
 
-<img src="../data/ll_plot_example.png" alt="LL-Example" width="600"/>
+<img src="../data/mpas-patches-example.png" alt="Pathces Example" width="800"/>

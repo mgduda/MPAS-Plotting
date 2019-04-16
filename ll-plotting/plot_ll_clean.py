@@ -144,6 +144,6 @@ for t in range(len(time)):
     cbar.set_label('Pressure (KPa)')
     cbar.set_ticks(color_ticks)
 
-    filename = 'plot_'+str(t)+'.pdf'
+    filename = 'plot_'+str(t)+'.png'
     plt.savefig(filename)
     plt.close()

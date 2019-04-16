@@ -20,4 +20,4 @@ section 2.4 in the MPAS tutorial, which can be found here:
 [http://www2.mmm.ucar.edu/projects/mpas/tutorial/Boulder2018/index.html](http://www2.mmm.ucar.edu/projects/mpas/tutorial/Boulder2018/index.html)
 
 
-<img src="../data/mpas-patches-example.png" alt="Patches Example" width="600"/>
+<img src="../data/ll-plot-example.png" alt="LL Example" width="800"/>
