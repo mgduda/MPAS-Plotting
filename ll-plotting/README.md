@@ -11,7 +11,7 @@ A more standard and natural way of plotting. Plotting against latitude and
 longitude is much quicker then creating the polygon patch collection to plot
 individual MPAS grid polygons. 
 
-While this example focuses on a MPAS grid and output files that have been
+While this example focuses on a MPAS output files that have been
 interpolated to a latitude, longitude grid, there is no reason that this
 example would not work for other models that produce gridded output.
 
