@@ -8,7 +8,13 @@ modules that appear.
 The goal of this repository is to function as a set of examples and reference
 for Python Modules that can be used to create model output plots.
 
-**Contents**
+
+**Tutorial Contents**
+* [mpas_patches](./mpas_patches) - Tutorial for plotting each indivual MPAS Grid Cell (Slow)
+* [ll-plotting](./ll-plotting) - Tutorial for plotting a normal lat, lon grid (using convert_mpas).
+
+
+**Readme Contents**
 * [Introduction to Python Modules](#Introduction)
     * [Numpy](#Numpy)
     * [Python NetCDF Modules and other Met Datatypes](#NetCDF)
