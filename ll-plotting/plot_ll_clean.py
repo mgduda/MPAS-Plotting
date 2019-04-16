@@ -9,6 +9,9 @@ and longitude grid.
 It will create a barbed plot of the surface winds, with a pcolor map of
 pressure at the same level behind it.
 
+Note: This 'clean' version of this example contains less comments and documentation,
+but is the same as plot_ll.py.
+
 '''
 
 import os

@@ -8,6 +8,8 @@ modules that appear.
 The goal of this repository is to function as a set of examples and reference
 for Python Modules that can be used to create model output plots.
 
+Note: Files that are named with 'clean' are the same as the files with
+the same name, but have less documentation and code comments.
 
 **Tutorial Contents**
 * mpas_patches - Tutorial for plotting each indivual MPAS Grid Cell (Slow)
