@@ -8,20 +8,19 @@ modules that appear.
 The goal of this repository is to function as a set of examples and reference
 for Python Modules that can be used to create model output plots.
 
-**Python NetCDF Modules and other Met Datatypes**<a name="NetCDF"/>
-
 **Contents**
-* [Introduction](#Introduction)
+* [Introduction to Python Modules](#Introduction)
     * [Numpy](#Numpy)
     * [Python NetCDF Modules and other Met Datatypes](#NetCDF)
     * [Cartopy and Basemap](#Basemap)
     * [Python on Cheyenne and Casper](#venv)
     * [Python 2 and Python 3](#version)
-* [Module Reference](#Module-References)
-* [References and Credits](#Refs-and-Credits)
+* [Quick Introduction to MatPlotLib](#MPL-Intro)
+* [Helpful References and Guides](#Module-References)
+<!-- [References and Credits](#Refs-and-Credits) -->
 
 
-# Introduction <a name="Introduction"/>
+# Introduction to Python Modules<a name="Introduction"/>
 
 Plotting Meteorological data in Python is a multi-module endeavour and is
 undoubtedly a bit overwhelming. Some modules even contain references to each
@@ -106,9 +105,34 @@ and you'll have access to all the above modules.
 
 **Python 2, Python 3**<a name="version"/>
 
-Python 2 will soon not be maintained. All these examples use Python 3. Use
+Python 2 will soon not be maintained. All of these examples use Python 3. Use
 Python 3.
 
+# Quick Introduction to MatPlotLib<a name="MPL-Intro"/>
+
+MatPlotLib can be a confusing module to use and understand at first, but with
+practice and understanding of how its mechanisms work, plotting becomes much
+easier.
+
+<a href="./data/MatPlotLib-Anatomy1.png"><img src="./data/MatPlotLib-Anatomy1.png" alt="Anatomy1" width="400"/></a>
+<a href="./data/MatPlotLib-Anatomy2.png"><img src="./data/MatPlotLib-Anatomy2.png" alt="Anatomy2" width="430"/></a>
+
+Above, are two images that I wish I had when I started using MPL. They both
+give an overview of the anatomy of a MPL Figure and its parts.
+
+You'll see on the image on the left, those two main parts are the Figure, and
+the Axes/Subplot. The Figure, is highest in the hierarchy of MPL, and it
+contains 1 or more Axes/Subplots. An Axes/Subplot represent an individual plot
+or graphic.
+
+So, for instance, the plots above contain a single Axes/Subplot, but are both,
+separately, their own figure. Often times, it is needed to create multiple
+subplots in a single figure, which MPL allows, such as: <a href="./data/MPL-SubPLot.png"><img src="./data/MPL-SubPlot.png" alt=Subplots width="300"/></a>
+
+If you are wanting to create a plot that is not within this tutorial. I
+recommend taking a look at the [MPL Example Gallery][MPL Example Gallery] and
+the [MPL Tutorial Page][MPL Tutorial Page] for a load of examples and tutorials
+on everything MPL.
 
 # Module and other Helpful References<a name="Module-References"/>
 
@@ -126,18 +150,31 @@ Python 3.
     * [Numpy Basics](https://docs.scipy.org/doc/numpy/user/index.html)
     * [Numpy Reference](https://docs.scipy.org/doc/numpy/reference/)
 
-Other helpful References and Guides
-* [MPL Example Gallery](https://matplotlib.org/gallery/index.html)
-* [MPL Color Maps](https://matplotlib.org/users/colormaps.html)
-* [MPL Styles](https://matplotlib.org/gallery/style_sheets/style_sheets_reference.html)
-* [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html)
-* [Axes](https://matplotlib.org/api/axes_api.html)
+Helpful References and Guides
 * [Anatomy Of MatplotLib](https://github.com/matplotlib/AnatomyOfMatplotlib)
+* [MPL Tutorial Page][MPL Tutorial Page]
+* [MPL Example Gallery][MPL Example Gallery]
+* [MPL Color Maps Reference](https://matplotlib.org/users/colormaps.html)
+* [MPL Plot Style Reference](https://matplotlib.org/gallery/style_sheets/style_sheets_reference.html)
+* [Figure Documentation](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html)
+* [Axes Documentation](https://matplotlib.org/api/axes_api.html)
 
 
 # References & Credits<a name="Refs-and-Credits"/>
-* [For examples and images describing MPL][1]
+* [For examples and the Antomy of MatPlotLib Image used in and Introduction to MatPlotLib][1]
 * [For help creating mpas_patches][2]
+* [Anatomy of A Figure Image](https://matplotlib.org/gallery/showcase/anatomy.html)
+
 
 [1]: https://github.com/matplotlib/AnatomyOfMatplotlib
 [2]: https://github.com/lmadaus/mpas_python
+[MPL Example Gallery]: https://matplotlib.org/gallery/index.html
+[MPL Tutorial Page]: https://matplotlib.org/tutorials/index.html
+
+# Todo:
+1. Add more examples (espcially 2D examples)
+   * Histogram, Barplots, Scatter Plots etc.
+   * Add a Subplot example (possibly using grid spacing)
+   * Add an example longitude or latitude 'slize' of a variable or two.
+2. Clean up the helpful reference and guide list into one list and not two
+3. Add documentation to `mpas_patches.py`

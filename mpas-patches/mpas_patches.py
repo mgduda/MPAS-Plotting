@@ -8,8 +8,21 @@ import matplotlib.collections as mplcollections
 import matplotlib.patches as patches
 import matplotlib.path as path
 
+''' This module creates or retrives a collection of MPL Path Patches for an MPAS unstructured mesh.
 
+Given an MPAS mesh file, `get_mpas_patches` will create a Path Patch for each MPAS grid, by looping
+over a Cell's vertices. Because this operation is a nCell * nEdge operation, it will take some
+quite some time.
 
+However, once a patch collection is created it is saved (using Python's Pickle module) as a 'patch'
+file. This patch file can be loaded for furture plots on that mesh, which will speed up future
+plots creation.
+
+This module was created with much help and guidence from the following repository:
+
+* https://github.com/lmadaus/mpas_python
+
+'''
 def update_progress(job_title, progress):
     length = 40
     block = int(round(length*progress))
@@ -20,7 +33,6 @@ def update_progress(job_title, progress):
     sys.stdout.flush()
 
 def get_mpas_patches(mesh, pickle=True, pickleFile=None):
-    # Generate Patches
     nCells = len(mesh.dimensions['nCells'])
     nEdgesOnCell = mesh.variables['nEdgesOnCell']
     verticesOnCell = mesh.variables['verticesOnCell']
@@ -52,7 +64,7 @@ def get_mpas_patches(mesh, pickle=True, pickleFile=None):
             sys.exit(-1)
 
     print("\nNo pickle file found, creating patches...")
-    print("If this is a large mesh, then this proccess will take a while")
+    print("If this is a large mesh, then this proccess will take a while...")
 
     for cell in range(len(mesh.dimensions['nCells'])):
         # For each cell, get the latitude and longitude points of its vertices
