@@ -15,20 +15,6 @@ costly and timely so `get_mpas_patches` will produce a python 'pickle' file, so
 that it will only need to be produced once. This will greatly speed up the time
 it takes to on subsequent visualiations.
 
-TODO: Maybe rewrite the following section? Or Delete it?
-
-I spared no epense creating this Python example. Its examples are not simplifed
-to the most basic python, but are instead the ways of writing python that I
-fine the cleanest, quickest, easiest to read and the most 'pythonic', but I
-have done my best to describe and comment was is going on. The links provided
-will contain a number of references to features that I have not covered. Please
-visit them.
-
-
-As well, please do not hesitate to contact me with any questions. I will be
-happy to provide help and explanation as needed.
-
-
 This file was created with great help and reference from:
 * https://github.com/lmadaus/mpas_python
 
@@ -68,18 +54,12 @@ parser.add_argument('file',
 parser.add_argument('-v',
                     '--var', 
                     type=str,
-                    default=None,
+                    default='pressure',
                     help='''Variable you want to plot from that file''')
 
 args = parser.parse_args()
+variable = args.var
 file = args.file
-
-
-if(not args.var): # Allow the user to change the plotted variable
-    variable = args.var
-else:
-    variable = 'pressure'
-
 
 # Open the NetCDF file and pull out the var at the given levels.
 # Check to see if the mesh contains the variable
@@ -149,10 +129,11 @@ color_map = cm.gist_ncar
 style = 'ggplot'
 
 '''
-Make three plots at vertical levels 1, 2, and 3 at time 0 (Probably the only
-time in this mesh file if it is a history or diagnostic file).
+Make plots at vertical levels that is specified the range below, not this will
+be vertical plots, 0, 1, 2, 3, and 4 and for all the times in this mesh file
+(if there are any).
 '''
-levels = range(10)
+levels = range(5)
 times = [0]
 for l in levels:
     for t in times:
@@ -218,13 +199,15 @@ for l in levels:
         ax.add_collection(patch_collection)
 
         '''
-        Add a colorbar (if desired), and add a label to it.
+        Add a colorbar (if desired), and add a label to it. In this example the
+        color bar will automatically be generated. See ll-plotting for a more
+        advance colorbar example.
 
-        TODO: Move the link below vvvv
         https://matplotlib.org/api/colorbar_api.html
         '''
         cbar = plt.colorbar(patch_collection)
         cbar.set_label('Pressure (Pa)')
+        
 
         ''' Create the title as you see fit '''
         plt.title(variable+' at time '+str(t)+' and at level '+str(l))
