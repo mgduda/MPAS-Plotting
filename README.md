@@ -12,7 +12,7 @@ Note: Files that are named with 'clean' are the same as the files with
 the same name, but have less documentation and code comments.
 
 **Tutorial Contents**
-* mpas_patches - Tutorial for plotting each indivual MPAS Grid Cell (Slow)
+* mpas_patches - Tutorial for plotting each indivual MPAS Grid Cell
 * ll-plotting - Tutorial for plotting a normal lat, lon grid (using convert_mpas).
 
 
