@@ -1,6 +1,12 @@
 Latitude and Longitude Plotting
 ===============================
 
+Run the scrip by running:
+```
+python plot_ll.py /path/to/latlon.nc
+```
+<img src="../data/ll-plot-example.png" alt="LL Example" width="700"/>
+
 A more standard and natural way of plotting. Plotting against latitude and
 longitude is much quicker then creating the polygon patch collection to plot
 individual MPAS grid polygons. 
@@ -19,5 +25,3 @@ section 2.4 in the MPAS tutorial, which can be found here:
 
 [http://www2.mmm.ucar.edu/projects/mpas/tutorial/Boulder2018/index.html](http://www2.mmm.ucar.edu/projects/mpas/tutorial/Boulder2018/index.html)
 
-
-<img src="../data/ll-plot-example.png" alt="LL Example" width="800"/>
