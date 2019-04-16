@@ -16,7 +16,7 @@ that it will only need to be produced once. This will greatly speed up the time
 it takes to on subsequent visualiations.
 
 Note: This 'clean' version of this example contains less comments and documentation,
-but is the same as plot_ll.py.
+but is the same as mpas_plot_pressure.py.
 
 This file was created with great help and reference from:
 * https://github.com/lmadaus/mpas_python
