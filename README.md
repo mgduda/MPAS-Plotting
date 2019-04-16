@@ -177,3 +177,4 @@ Helpful References and Guides
    * Add a Subplot example (possibly using grid spacing)
    * Add an example longitude or latitude 'slize' of a variable or two.
 2. Clean up the helpful reference and guide list into one list and not two
+3. Add documentation to `mpas_patches.py`
