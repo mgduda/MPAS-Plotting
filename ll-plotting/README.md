@@ -9,7 +9,7 @@ While this example focuses on a MPAS grid and output files that have been
 interpolated to a latitude, longitude grid, there is no reason that this
 example would not work for other models that produce gridded output.
 
-To convert an MPAS output to a lat, lon grid. Please use the `convert_mpas`
+To convert an MPAS output to a lat, lon grid use the `convert_mpas`
 utility which can be found here:
 
 [https://github.com/mgduda/convert_mpas](https://github.com/mgduda/convert_mpas)

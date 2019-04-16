@@ -8,7 +8,13 @@ modules that appear.
 The goal of this repository is to function as a set of examples and reference
 for Python Modules that can be used to create model output plots.
 
-**Contents**
+
+**Tutorial Contents**
+* mpas_patches - Tutorial for plotting each indivual MPAS Grid Cell (Slow)
+* ll-plotting - Tutorial for plotting a normal lat, lon grid (using convert_mpas).
+
+
+**Readme Contents**
 * [Introduction to Python Modules](#Introduction)
     * [Numpy](#Numpy)
     * [Python NetCDF Modules and other Met Datatypes](#NetCDF)
@@ -24,35 +30,36 @@ for Python Modules that can be used to create model output plots.
 
 Plotting Meteorological data in Python is a multi-module endeavour and is
 undoubtedly a bit overwhelming. Some modules even contain references to each
-other, which can undoubtedly be even more confusing. I hope to break this
-process down into more manageable chunks, and also point you in the right
-direction to find the information you need.
+other, which can be even more consufing. I hope to break this process down 
+into more manageable chunks, and also point you in the right direction to 
+find the information you need.
 
 
 **Numpy**<a name="Numpy"/>
 
-One feature that Fortran has over Python are its n-dimensional arrays and its
-operations around those arrays. Vanilla Python allows you to have
-multidimensional 'lists', but these multi-dimensional lists are large and
-inefficient for vector and scaler operations. Thus, enters Numpy.
+One feature that Fortran has over vanilla Python are its n-dimensional arrays and its
+operations around those arrays. Out of the box Python allows you to have
+multidimensional 'lists', but these list of lists are large and
+inefficient for vector and scaler operations.
 
-Numpy enables smaller, more efficient n-dimensional arrays in a very similar
+The Numpy module enables smaller, more efficient n-dimensional arrays in a very similar
 approach to Fortran n-d arrays. With useful intrinsics such as `shape`,
 `size`, `ndim` and others, which allow you to inspect data as you see fit.
 
-It also enables a load of optimized mathematical functions that are sure to fit
-your needs: <https://docs.scipy.org/doc/numpy/reference/routines.math.html>.
+It also enables a load of optimized mathematical functions that you can dream of: 
+<https://docs.scipy.org/doc/numpy/reference/routines.math.html>.
 
 **Python NetCDF Modules and other Met Datatypes**<a name="NetCDF"/>
 
 There are a few modules out there that can support reading, creating and
-manipulating NetCDF. These include: Scipy NetCDF, NetCDF4 Dataset, xArray, as
+manipulating NetCDF datafiles. These include: Scipy NetCDF, NetCDF4 Dataset, xArray, as
 well as NCAR's PyNIO (which is an NCL wrapper).
 
-You have a multitude of modules to choose from, but I recommend starting with
+There are multitude of modules to choose from, but I recommend starting with
 Scipy's NetCDF module to start. It contains the most examples and is the best
 documented; however, it cannot open NetCDF4, but you can use UNIDATA's NetCDF4
-Dataset instead, its also easy to use, but its documentation could be better.
+Dataset instead, its also easy to use, but its documentation could be better. The
+examples in this tutorial use the UNIDATA's NetCDF4 module.
 
 If you need to open other Datatypes such as Grib, HDF, etc. PyNIO is currently
 your best choice: <https://www.pyngl.ucar.edu/Nio.shtml>. However, with the
@@ -64,13 +71,14 @@ modules that can open them:
 * HDFS - [PyTables](http://www.pytables.org/index.html)
 * HDF-EOS - [PyHDF](https://www.hdfeos.org/software/pyhdf.php)
 
-(Note: I don't know how many of these are on cheyenne or capser)
+(Note: Besides Scipy's NetCDF and Unidata's NetCDF4 I don't know how many of 
+these are on cheyenne or capser)
 
 **MatPlotLib (MPL)**<a name="MatPlotLib"/>
 
 The free alternative to creating plots in MATLAB, MPL was created by
-neurobiologist to plot EEG of his patients, it has perhaps one of the largest
-open source python modules in the pythonic world.
+neurobiologist to plot EEG of his patients, it has perhaps the largest 
+open source python modules out there.
 
 It is flexible beyond belief to fit a variety of application and can be used to
 create publication-quality figures (though you may disagree coming from NCL) to
@@ -82,8 +90,8 @@ and Cartopy.
 
 **Basemap and Cartopy**<a name="Basemap"/>
 
-These two modules are built on top of MatPlotLib and allow the complicated (for
-me) handling of projections and converting between projections. 
+These two modules are built on top of MatPlotLib and allow the complicated 
+handling of projections and converting between projections.
 
 Cartopy is a newer module, but is still in alpha and lacking in features and
 documentation which makes it difficult to use, but it appears to be developing
@@ -94,6 +102,9 @@ more features and more examples and is much easier to use at the current
 moment. I recommend using Basemap while Cartopy gains documentation and
 features.
 
+Examples within this tutorial use Basemap; however, once I see Cartopy
+gaining more traction and better documentation (and I get more familar with it)
+I will create examples using it.
 
 **Python on Cheyenne and Casper**<a name="venv"/>
 
