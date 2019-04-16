@@ -10,8 +10,8 @@ for Python Modules that can be used to create model output plots.
 
 
 **Tutorial Contents**
-* [mpas_patches](./mpas_patches/) - Tutorial for plotting each indivual MPAS Grid Cell (Slow)
-* [ll-plotting](./ll-plotting/) - Tutorial for plotting a normal lat, lon grid (using convert_mpas).
+* [mpas_patches](mpas_patches) - Tutorial for plotting each indivual MPAS Grid Cell (Slow)
+* [ll-plotting](ll-plotting) - Tutorial for plotting a normal lat, lon grid (using convert_mpas).
 
 
 **Readme Contents**
